@@ -57,9 +57,15 @@ This application allows users to record their daily expenses, organize them into
 ### Open in browser:
 - http://localhost:5000
 
+## Edge Cases Handled
 
-## Screenshots
-<img width="1857" height="947" alt="Screenshot 2025-12-04 155109" src="https://github.com/user-attachments/assets/974741b9-779a-4bf0-a9d7-2b022c43a692" />
-<img width="1844" height="1024" alt="Screenshot 2025-12-04 155130" src="https://github.com/user-attachments/assets/faccd80a-a972-4d71-a093-7517d7e34219" />
-<img width="1861" height="1010" alt="Screenshot 2025-12-04 155209" src="https://github.com/user-attachments/assets/c1432059-f8c2-4ff4-8710-8ad13d00406d" />
-<img width="1860" height="981" alt="Screenshot 2025-12-04 155227" src="https://github.com/user-attachments/assets/5a4cdc3e-d2f5-4f21-a36a-ee3cfc696455" />
+- Validates positive amount for every expense
+- Ensures required fields (amount/category) are not empty
+- Handles invalid date input formats safely
+- Prevents duplicate month budgets (updates instead of inserting)
+- Supports very large expense values without crashing
+- Monthly budget overrides general budget correctly
+- App continues working if email alert settings are not configured
+- Shows proper messages when no expenses exist
+- Shared-group field is optional and stored safely
+- Database auto creates if missing
