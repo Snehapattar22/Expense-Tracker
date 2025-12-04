@@ -16,43 +16,43 @@ This application allows users to record their daily expenses, organize them into
 
 ## Tech Stack Used:
 
-Python
-SQLite
-SQLAlchemy ORM
-HTML, CSS, Jinja2
-Docker
-Pytest
+- Python
+- SQLite
+- SQLAlchemy ORM
+- HTML, CSS, Jinja2
+- Docker
+- Pytest
 
 ## How to Run the Project Locally:
 
 ### Create Virtual Environment
 #### Windows:
-python -m venv venv
-venv\Scripts\activate
+- python -m venv venv
+- venv\Scripts\activate
 
 #### Mac/Linux:
-python3 -m venv venv
-source venv/bin/activate
+- python3 -m venv venv
+- source venv/bin/activate
 
-#### Install Dependencies
-pip install -r requirements.txt
+### Install Dependencies
+- pip install -r requirements.txt
 
-#### Initialize the Database
-python db_init.py
+### Initialize the Database
+- python db_init.py
 
-#### Start the Application
-python app.py
+### Start the Application
+- python app.py
 
-#### Open in browser:
-http://localhost:5000
+### Open in browser:
+- http://localhost:5000
 
-### How to Run the Project Using Docker:
+## How to Run the Project Using Docker:
 
-#### Build Docker Image
-docker build -t expense-tracker .
+### Build Docker Image
+- docker build -t expense-tracker .
 
-#### Run Docker Container
-docker run -p 5000:5000 expense-tracker
+### Run Docker Container
+- docker run -p 5000:5000 expense-tracker
 
-#### Open in browser:
-http://localhost:5000
+### Open in browser:
+- http://localhost:5000
