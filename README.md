@@ -56,3 +56,10 @@ This application allows users to record their daily expenses, organize them into
 
 ### Open in browser:
 - http://localhost:5000
+
+
+## Screenshots
+<img width="1857" height="947" alt="Screenshot 2025-12-04 155109" src="https://github.com/user-attachments/assets/974741b9-779a-4bf0-a9d7-2b022c43a692" />
+<img width="1844" height="1024" alt="Screenshot 2025-12-04 155130" src="https://github.com/user-attachments/assets/faccd80a-a972-4d71-a093-7517d7e34219" />
+<img width="1861" height="1010" alt="Screenshot 2025-12-04 155209" src="https://github.com/user-attachments/assets/c1432059-f8c2-4ff4-8710-8ad13d00406d" />
+<img width="1860" height="981" alt="Screenshot 2025-12-04 155227" src="https://github.com/user-attachments/assets/5a4cdc3e-d2f5-4f21-a36a-ee3cfc696455" />
