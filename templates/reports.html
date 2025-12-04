@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+<h2>Reports</h2>
+
+<h3>Total Spent Per Month</h3>
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Total</th>
+  </tr>
+  {% for t in totals %}
+  <tr>
+    <td>{{ t.month }}</td>
+    <td>{{ t.total }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h3>Spending vs Budget ({{ cur_month }})</h3>
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Spent</th>
+    <th>Budget</th>
+    <th>Status</th>
+  </tr>
+  {% for c in cat_data %}
+  <tr>
+    <td>{{ c.category }}</td>
+    <td>{{ c.spent }}</td>
+    <td>{{ c.budget or '---' }}</td>
+    <td>
+      {% if c.budget %} {% if c.spent > c.budget %} Exceeded {% elif c.spent >=
+      0.9 * c.budget %} Near Limit {% else %} OK {% endif %} {% else %} No
+      budget {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

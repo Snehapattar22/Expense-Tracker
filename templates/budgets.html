@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+<h2>Set Budgets</h2>
+
+<form method="POST">
+  <label
+    >Category:
+    <select name="category">
+      {% for c in categories %}
+      <option value="{{ c.id }}">{{ c.name }}</option>
+      {% endfor %}
+    </select> </label
+  ><br /><br />
+
+  <label
+    >Budget Amount:
+    <input type="number" name="amount" step="0.01" required /> </label
+  ><br /><br />
+
+  <label>Month (optional, YYYY-MM): <input type="text" name="month" /> </label
+  ><br /><br />
+
+  <button type="submit">Save</button>
+</form>
+
+<h3>Existing Budgets</h3>
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Month</th>
+    <th>Amount</th>
+  </tr>
+  {% for b in budgets %}
+  <tr>
+    <td>{{ b.category.name }}</td>
+    <td>{{ b.month_year or 'General' }}</td>
+    <td>{{ b.amount }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

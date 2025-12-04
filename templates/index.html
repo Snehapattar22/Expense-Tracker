@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<h2>Summary for {{ cur_month }}</h2>
+<p>Total spent this month: <strong>{{ month_total }}</strong></p>
+
+<h3>Recent Expenses</h3>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Category</th>
+    <th>Amount</th>
+    <th>Note</th>
+  </tr>
+  {% for e in recent %}
+  <tr>
+    <td>{{ e.date }}</td>
+    <td>{{ e.user.name }}</td>
+    <td>{{ e.category.name }}</td>
+    <td>{{ e.amount }}</td>
+    <td>{{ e.note }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
