@@ -65,7 +65,4 @@ This application allows users to record their daily expenses, organize them into
 - Prevents duplicate month budgets (updates instead of inserting)
 - Supports very large expense values without crashing
 - Monthly budget overrides general budget correctly
-- App continues working if email alert settings are not configured
 - Shows proper messages when no expenses exist
-- Shared-group field is optional and stored safely
-- Database auto creates if missing
